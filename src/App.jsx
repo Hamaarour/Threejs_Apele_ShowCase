@@ -1,12 +1,18 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Hero from './components/Hero'
+import Highlights from './components/Highlights'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen w-full">
-      <Router>
-        <Routes></Routes>
-      </Router>
-    </div>
+    <main className="bg-black">
+      <Navbar />
+      <Hero />
+      <Highlights />
+      {/* <Model />
+      <Features />
+      <HowItWorks />
+      <Footer /> */}
+    </main>
   )
 }
 
