@@ -29,7 +29,7 @@ const VideoCarousel = () => {
     gsap.to('#slider', {
       transform: `translateX(${-100 * videoId}%)`,
       duration: 2,
-      ease: 'power2.inOut' // show visualizer https://gsap.com/docs/v3/Eases
+      ease: 'power2.inOut'
     })
 
     // video animation to play the video when it is in the view
@@ -64,12 +64,7 @@ const VideoCarousel = () => {
 
             // set the width of the progress bar
             gsap.to(videoDivRef.current[videoId], {
-              width:
-                window.innerWidth < 760
-                  ? '10vw' // mobile
-                  : window.innerWidth < 1200
-                  ? '10vw' // tablet
-                  : '4vw' // laptop
+              width: window.innerWidth < 760 ? '10vw' : window.innerWidth < 1200 ? '10vw' : '4vw'
             })
 
             // set the background color of the progress bar
